@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="bai1-tab" data-toggle="pill" data-target="#bai1" type="button"
+                    role="tab" aria-controls="bai1" aria-selected="true">Bài 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bai2-tab" data-toggle="pill" data-target="#bai2" type="button" role="tab"
+                    aria-controls="bai2" aria-selected="false">Bài 2</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bai3-tab" data-toggle="pill" data-target="#bai3" type="button" role="tab"
+                    aria-controls="bai3" aria-selected="false">Bài 3</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bai4-tab" data-toggle="pill" data-target="#bai4" type="button" role="tab"
+                    aria-controls="bai4" aria-selected="false">Bài 4</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="bai1" role="tabpanel" aria-labelledby="bai1-tab">
+                <h3>Bài 1: Viết chương trình xuất 3 số theo thứ tự tăng dần</h3>
+                <div class="w-50">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="so1">Nhập số thứ nhất:</label>
+                            <input type="text" class="form-control" name="" id="so1">
+                        </div>
+                        <div class="form-group">
+                            <label for="so2">Nhập số thứ hai:</label>
+                            <input type="text" class="form-control" name="" id="so2">
+                        </div>
+                        <div class="form-group">
+                            <label for="so3">Nhập số thứ ba:</label>
+                            <input type="text" class="form-control" name="" id="so3">
+                        </div>
+                    </form>
+                    <button onclick="soTangDan()" class="btn btn-success">Tính toán</button>
+                    <div class="mt-2 alert alert-success">
+                        Thứ tự tăng dần của 3 số là: <span id="btnTang"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="bai2-tab">
+                <h3>Bài 2: Tính giá trị trung bình</h3>
+                <div class="w-50">
+                    <select class="form-control" id="thanhVien">
+                        <option value="">Chọn thành viên</option>
+                        <option value="B">Bố</option>
+                        <option value="M">Mẹ</option>
+                        <option value="A">Anh Trai</option>
+                        <option value="E">Em gái</option>
+                    </select>
+                    <button onclick="loiChao()"class="btn btn-success mt-2">Lời chào</button>
+                    <div class="mt-2 alert alert-success">
+                        Chào <span id="btnChao"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade show" id="bai3" role="tabpanel" aria-labelledby="bai3-tab">
+                <h3>Bài 3: Viết chương trình xuất ra có bao nhiêu số lẻ và bao nhiêu số chẵn.</h3>
+                <div class="w-50">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="soThu1">Nhập số thứ nhất:</label>
+                            <input type="text" class="form-control" name="" id="soThu1">
+                        </div>
+                        <div class="form-group">
+                            <label for="soThu2">Nhập số thứ hai:</label>
+                            <input type="text" class="form-control" name="" id="soThu2">
+                        </div>
+                        <div class="form-group">
+                            <label for="soThu3">Nhập số thứ ba:</label>
+                            <input type="text" class="form-control" name="" id="soThu3">
+                        </div>
+                    </form>
+                    <button type="button" onclick="chanLe()" class="btn btn-success">Tính toán</button>
+                    <div class="mt-2 alert alert-success">
+                        <span id="btnCL"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade show" id="bai4" role="tabpanel" aria-labelledby="bai4-tab">
+                <h3>Bài 4: Xác định loại tam giác</h3>
+                <div class="w-50">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="canh1">Nhập cạnh thứ nhất:</label>
+                            <input type="text" class="form-control" name="" id="canh1">
+                        </div>
+                        <div class="form-group">
+                            <label for="canh2">Nhập cạnh thứ hai:</label>
+                            <input type="text" class="form-control" name="" id="canh2">
+                        </div>
+                        <div class="form-group">
+                            <label for="canh3">Nhập cạnh thứ ba:</label>
+                            <input type="text" class="form-control" name="" id="canh3">
+                        </div>
+                    </form>
+                    <button onclick="tamGiac()" class="btn btn-success">Tính toán</button>
+                    <div class="mt-2 alert alert-success">
+                        Đây là tam giác <span id="btnTamGiac"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+        </script>
+
+        <!-- <script src="js/main.js"></script> -->
+        <script src="js/main.js"></script>
+</body>
+
+</html>
