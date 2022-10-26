@@ -1,3 +1,13 @@
+//! Bài 1
+/**
+ * b1: tạo hàm
+ * b2: lấy giá trị từ value
+ * b3: tạo hàm if else
+ * b4: phân loại điều kiện và trả kết quả
+ * 
+ * 
+ * b5: hiển thị kết quả
+ */
 function soTangDan(){
     var so1 = Number(document.getElementById("so1").value);
     // console.log(so1);
@@ -32,6 +42,16 @@ function soTangDan(){
     }
 }
 
+//! Bài 2
+/**
+ * b1: tạo hàm
+ * b2: đặt giá trị value cho từng option
+ * b3: lấy giá trị value
+ * b4: tạo hàm if else
+ * b5: phân loại và trả kết quả
+ * b6: trả kểt quả và hiển thị lên UI
+ */
+
 function loiChao(){
     var thanhVien = document.getElementById("thanhVien").value;
     // console.log(thanhVien)
@@ -53,6 +73,21 @@ function loiChao(){
             alert("vui lòng chọn thành viên");
     }
 }
+//! Bài 3
+/**
+ * ? input
+ * số thứ 1, số thứ 2, số thứ 3
+ * 
+ * ? các bước xử lý
+ *  tạo hàm onclick cho btn
+ *  lấy giá trị từ value chia cho 2 lấy được số dư ==> so dư = 0 => số chẳn và ngược lại
+ *  tạo hàm điều kiện
+ *  phân loại điều kiện 
+ * 
+ * ? output 
+ *  b3: hiển thị kết quả lên UI
+ * 
+ */
 
 function chanLe(){
     var soThu1 = Number(document.getElementById("soThu1").value);
@@ -67,26 +102,36 @@ function chanLe(){
     if (soThu1 % 2 == 0){
         count++;
         // console.log(count)
-    }else{
-        console.log("lẻ")
     }
     if (soThu2 % 2 == 0){
         count++;
         // console.log(count)
-    }else{
-        console.log("lẻ")
-    }  
+    } 
     if (soThu3 % 2 == 0){
         count++;
         console.log(count)
-    }else{
-        console.log("lẻ")
     }
 
     var le = 3 - count;
 
     document.getElementById("btnCL"). innerHTML = "Có " + count +" số chẵn và "+ le +" số lẻ";
 }
+
+//! Bài 4
+/**
+ *?  input :
+ *  canh1, canh2, canh3
+ *
+ *? các bước xử lý
+ *  tạo hàm onclick từ btn
+ *  lấy giá trị từ value
+ *  tạo hàm if else
+ *  phân loại điều kiện tam giác
+ *
+ *?  output
+ *  b3:hiển thị kết quả lên UI
+ */
+
 function tamGiac(){
     var canh1 = Number(document.getElementById("canh1").value);
     var canh2 = Number(document.getElementById("canh2").value);
