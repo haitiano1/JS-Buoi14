@@ -91,25 +91,17 @@ function loiChao(){
 
 function chanLe(){
     var soThu1 = Number(document.getElementById("soThu1").value);
-    // console.log(soThu1);
     var soThu2 = Number(document.getElementById("soThu2").value);
-    // console.log(soThu2);
     var soThu3 = Number(document.getElementById("soThu3").value);
-    // console.log(soThu3);
-
     var count = 0;
 
     if (soThu1 % 2 == 0){
         count++;
-        // console.log(count)
     }
     if (soThu2 % 2 == 0){
-        count++;
-        // console.log(count)
     } 
     if (soThu3 % 2 == 0){
         count++;
-        console.log(count)
     }
 
     var le = 3 - count;
